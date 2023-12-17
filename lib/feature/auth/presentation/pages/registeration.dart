@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
+import 'package:test/feature/auth/presentation/widgets/input/custom_textfield.dart';
 
 class RegisterationPage extends StatefulWidget {
   const RegisterationPage({super.key});
@@ -11,6 +12,8 @@ class RegisterationPage extends StatefulWidget {
 class _RegisterationPageState extends State<RegisterationPage> {
   @override
   Widget build(BuildContext context) {
+    final TextEditingController controller = TextEditingController();
+    final GlobalKey<FormState> _fromKey = GlobalKey();
     return Scaffold(
       body: Center(
         child: SizedBox(
@@ -48,21 +51,16 @@ class _RegisterationPageState extends State<RegisterationPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 100, right: 16, left: 16),
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                      hintTextDirection: TextDirection.rtl,
-                      hintText: 'شماره همراه خود را وارد کنید',
-                      suffixIcon: Icon(
-                        Icons.phone_android,
-                        color: Colors.grey,
-                      ),
-                      border: UnderlineInputBorder(),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color.fromARGB(255, 248, 223, 6),
-                        ),
-                      ),
+                  child: CustomTextField(
+                    validator: (value){},
+                    controller: controller,
+                    width: MediaQuery.of(context).size.width / 1.3,
+                    height: 42.0,
+                    icon: const Icon(
+                      Icons.phone_android,
+                      color: Colors.grey,
                     ),
+                    hintText: 'شماره همراه خود را وارد کنید',
                   ),
                 ),
                 Padding(
@@ -73,7 +71,10 @@ class _RegisterationPageState extends State<RegisterationPage> {
                   ),
                   child: CustomButton(
                     title: 'دریافت کد فعالسازی',
-                    onPressed: () {},
+                    onPressed: () {
+                      
+
+                    },
                   ),
                 ),
               ],
