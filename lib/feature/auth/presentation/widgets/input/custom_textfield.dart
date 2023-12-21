@@ -10,7 +10,7 @@ class CustomTextField extends StatefulWidget {
       this.hintText,
       this.errorText,
       this.icon});
-  final Function(String value) validator;
+  final String? Function(String? value) validator;
   final TextEditingController? controller;
   final String? hintText;
   final Icon? icon;
@@ -29,7 +29,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       width: widget.width,
       height: widget.height,
       child: TextFormField(
-        validator: ,
+        validator: widget.validator,
         decoration: InputDecoration(
           hintTextDirection: TextDirection.rtl,
           hintText: 'شماره همراه خود را وارد کنید',

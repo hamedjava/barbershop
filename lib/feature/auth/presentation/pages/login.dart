@@ -37,9 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: TextFormField(
-                      validator: (value) {
-                        
-                      },
+                      validator: (value) {},
                       decoration: const InputDecoration(
                         suffixIcon: Icon(
                           Icons.phone_android,
