@@ -3,8 +3,8 @@ import 'package:hexcolor/hexcolor.dart';
 
 class CustomButton extends StatefulWidget {
   final String title;
-  Function? onPressed;
-  CustomButton({super.key, required this.title, this.onPressed});
+  final Function? onPressed;
+  const CustomButton({super.key, required this.title, this.onPressed});
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
