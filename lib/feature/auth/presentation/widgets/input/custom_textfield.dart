@@ -32,7 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         validator: widget.validator,
         decoration: InputDecoration(
           hintTextDirection: TextDirection.rtl,
-          hintText: 'شماره همراه خود را وارد کنید',
+          hintText: widget.hintText,
           errorText: widget.errorText,
           suffixIcon: widget.icon,
           border: const UnderlineInputBorder(),

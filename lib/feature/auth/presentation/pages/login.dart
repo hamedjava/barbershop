@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
+import 'package:test/feature/auth/presentation/widgets/input/custom_textfield.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -9,6 +10,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController numberController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,39 +39,22 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: TextFormField(
+                    child: CustomTextField(
                       validator: (value) {
                         return null;
                       },
-                      decoration: const InputDecoration(
-                        suffixIcon: Icon(
-                          Icons.phone_android,
-                          color: Colors.grey,
-                        ),
-                        border: UnderlineInputBorder(),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color.fromARGB(255, 248, 223, 6),
-                          ),
-                        ),
-                      ),
+                      hintText: 'شماره موبایل خود را وارد کنید',
+                      controller: numberController,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        suffixIcon: Icon(
-                          Icons.key_outlined,
-                          color: Colors.grey,
-                        ),
-                        border: UnderlineInputBorder(),
-                        focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Color.fromARGB(255, 248, 223, 6),
-                          ),
-                        ),
-                      ),
+                    child: CustomTextField(
+                      validator: (value) {
+                        return null;
+                      },
+                      controller: passwordController,
+                      hintText: 'رمز عبور خود را وارد کنید',
                     ),
                   ),
                   InkWell(
