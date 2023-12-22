@@ -61,7 +61,8 @@ class _UserLoginState extends State<UserLogin> {
                     onTap: () {},
                     child: const Text(
                       '! رمز عبور را فراموش کرده ام ',
-                      style: TextStyle(color: Colors.blue),
+                      style:
+                          TextStyle(color: Colors.blue, fontFamily: 'iranSans'),
                     ),
                   ),
 

@@ -64,7 +64,7 @@ class _UserRegisterState extends State<UserRegister> {
                       controller: controller,
                       width: MediaQuery.of(context).size.width / 1.3,
                       height: 42.0,
-                      icon: const Icon(
+                      suffixIcon: const Icon(
                         Icons.phone_android,
                         color: Colors.grey,
                       ),

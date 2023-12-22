@@ -17,13 +17,14 @@ class _CustomButtonState extends State<CustomButton> {
       fillColor: HexColor("#EB98B6"),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       child: SizedBox(
-          width: MediaQuery.of(context).size.width / 1.3,
-          child: Center(
-            child: Text(
-              widget.title,
-              style: const TextStyle(color: Colors.white),
-            ),
-          )),
+        width: MediaQuery.of(context).size.width / 1.3,
+        child: Center(
+          child: Text(
+            widget.title,
+            style: const TextStyle(color: Colors.white, fontFamily: 'iranSans'),
+          ),
+        ),
+      ),
       onPressed: () {},
     );
   }

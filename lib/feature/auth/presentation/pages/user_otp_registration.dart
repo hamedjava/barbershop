@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:test/core/constant/constants.dart';
 import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
 
 class OTPRegisteration extends StatefulWidget {
@@ -15,7 +16,7 @@ class _OTPRegisterationState extends State<OTPRegisteration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppbar(),
+      appBar: buildAppbar(),
       body: Center(
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 1.1,
@@ -107,22 +108,6 @@ class _OTPRegisterationState extends State<OTPRegisteration> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  _buildAppbar() {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      title: GradientText(
-        'Highlight',
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 32.0,
-        ),
-        gradientType: GradientType.linear,
-        colors: [HexColor("#EB98B6"), Color.fromARGB(255, 255, 221, 232)],
       ),
     );
   }

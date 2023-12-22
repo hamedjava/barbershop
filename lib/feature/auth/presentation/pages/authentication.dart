@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:test/core/constant/constants.dart';
 import 'package:test/feature/auth/presentation/pages/user_login.dart';
 import 'package:test/feature/auth/presentation/pages/user_register.dart';
 
@@ -52,22 +52,6 @@ class _AuthenticationState extends State<Authentication> {
             ),
           ),
         ),
-        appBar: _buildAppbar());
-  }
-
-  _buildAppbar() {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      title: GradientText(
-        'Highlight',
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 32.0,
-        ),
-        gradientType: GradientType.linear,
-        colors: [HexColor("#EB98B6"), Color.fromARGB(255, 255, 221, 232)],
-      ),
-    );
+        appBar: buildAppbar());
   }
 }

@@ -9,14 +9,17 @@ class CustomTextField extends StatefulWidget {
       this.height,
       this.hintText,
       this.errorText,
-      this.icon});
+      this.suffixIcon,
+      this.prefixIcon,
+      this.checked});
   final String? Function(String? value) validator;
   final TextEditingController? controller;
   final String? hintText;
-  final Icon? icon;
+  final Icon? suffixIcon, prefixIcon;
   final double? width;
   final double? height;
   final String? errorText;
+  final Checkbox? checked;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -29,12 +32,16 @@ class _CustomTextFieldState extends State<CustomTextField> {
       width: widget.width,
       height: widget.height,
       child: TextFormField(
+        controller: widget.controller,
         validator: widget.validator,
         decoration: InputDecoration(
           hintTextDirection: TextDirection.rtl,
           hintText: widget.hintText,
           errorText: widget.errorText,
-          suffixIcon: widget.icon,
+          suffixIcon: widget.suffixIcon,
+          prefixIcon: widget.prefixIcon,
+          suffix: widget.checked,
+          hintStyle: const TextStyle(fontFamily: 'iranSans'),
           border: const UnderlineInputBorder(),
           focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(

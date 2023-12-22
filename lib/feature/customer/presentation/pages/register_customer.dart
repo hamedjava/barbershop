@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:test/core/constant/constants.dart';
+import 'package:test/feature/auth/presentation/widgets/input/custom_textfield.dart';
 
 class RegisterCustomer extends StatefulWidget {
   const RegisterCustomer({super.key});
@@ -15,28 +16,56 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppbar(),
+      appBar: buildAppbar(),
       backgroundColor: HexColor('#FEFBFF'),
-      body: const Center(
+      body: Center(
         child: Column(
-          children: [],
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(bottom: 22.0),
+              child: Text(
+                'شماره تماس خود را وارد کنید',
+                style: TextStyle(fontFamily: 'iranSans', color: Colors.black87),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: TextFormField(
+                validator: (value) {
+                  return null;
+                },
+                decoration: InputDecoration(
+                  prefixIcon: const Padding(
+                    padding: EdgeInsets.only(top: 10, left: 26.0, right: 12),
+                    child: Icon(
+                      Icons.phone,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  suffix: Padding(
+                    padding: const EdgeInsets.only(top: 6.0),
+                    child: Checkbox(value: false, onChanged: (value) {}),
+                  ),
+                  hintTextDirection: TextDirection.rtl,
+                  hintStyle: const TextStyle(fontFamily: 'iranSans'),
+                  border: const OutlineInputBorder(),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.pinkAccent,
+                    ),
+                  ),
+                  errorBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.red),
+                  ),
+                  errorStyle: const TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
-      ),
-    );
-  }
-
-  _buildAppbar() {
-    return AppBar(
-      backgroundColor: Colors.transparent,
-      centerTitle: true,
-      title: GradientText(
-        'Highlight',
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 32.0,
-        ),
-        gradientType: GradientType.linear,
-        colors: [HexColor("#EB98B6"), Color.fromARGB(255, 255, 221, 232)],
       ),
     );
   }
