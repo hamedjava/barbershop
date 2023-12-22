@@ -4,14 +4,14 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:test/feature/auth/presentation/pages/login.dart';
 import 'package:test/feature/auth/presentation/pages/registeration.dart';
 
-class UserRegister extends StatefulWidget {
-  const UserRegister({super.key});
+class Authentication extends StatefulWidget {
+  const Authentication({super.key});
 
   @override
-  State<UserRegister> createState() => _UserRegisterState();
+  State<Authentication> createState() => _AuthenticationState();
 }
 
-class _UserRegisterState extends State<UserRegister> {
+class _AuthenticationState extends State<Authentication> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
