@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:test/feature/auth/presentation/pages/login.dart';
-import 'package:test/feature/auth/presentation/pages/registeration.dart';
+import 'package:test/feature/auth/presentation/pages/user_login.dart';
+import 'package:test/feature/auth/presentation/pages/user_register.dart';
 
 class Authentication extends StatefulWidget {
   const Authentication({super.key});
@@ -46,8 +46,8 @@ class _AuthenticationState extends State<Authentication> {
             ),
             body: const TabBarView(
               children: [
-                RegisterationPage(),
-                LoginPage(),
+                UserRegister(),
+                UserLogin(),
               ],
             ),
           ),

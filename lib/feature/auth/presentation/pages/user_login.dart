@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
 import 'package:test/feature/auth/presentation/widgets/input/custom_textfield.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class UserLogin extends StatefulWidget {
+  const UserLogin({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<UserLogin> createState() => _UserLoginState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _UserLoginState extends State<UserLogin> {
   TextEditingController numberController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   @override

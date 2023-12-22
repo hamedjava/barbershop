@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
 import 'package:test/feature/auth/presentation/widgets/input/custom_textfield.dart';
 
-class RegisterationPage extends StatefulWidget {
-  const RegisterationPage({super.key});
+class UserRegister extends StatefulWidget {
+  const UserRegister({super.key});
 
   @override
-  State<RegisterationPage> createState() => _RegisterationPageState();
+  State<UserRegister> createState() => _UserRegisterState();
 }
 
-class _RegisterationPageState extends State<RegisterationPage> {
+class _UserRegisterState extends State<UserRegister> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController controller = TextEditingController();
