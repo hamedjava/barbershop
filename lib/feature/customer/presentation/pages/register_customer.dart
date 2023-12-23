@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:test/core/constant/constants.dart';
-import 'package:test/feature/auth/presentation/widgets/input/custom_textfield.dart';
+import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
+import 'package:test/feature/customer/presentation/widgets/input/custom_textfield.dart';
 
 class RegisterCustomer extends StatefulWidget {
   const RegisterCustomer({super.key});
@@ -31,38 +32,26 @@ class _RegisterCustomerState extends State<RegisterCustomer> {
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: TextFormField(
+              child: CustomTextFormField(
+                width: MediaQuery.of(context).size.width / 1.3,
+                height: 42,
                 validator: (value) {
                   return null;
                 },
-                decoration: InputDecoration(
-                  prefixIcon: const Padding(
-                    padding: EdgeInsets.only(top: 10, left: 26.0, right: 12),
-                    child: Icon(
-                      Icons.phone,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  suffix: Padding(
-                    padding: const EdgeInsets.only(top: 6.0),
-                    child: Checkbox(value: false, onChanged: (value) {}),
-                  ),
-                  hintTextDirection: TextDirection.rtl,
-                  hintStyle: const TextStyle(fontFamily: 'iranSans'),
-                  border: const OutlineInputBorder(),
-                  focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.pinkAccent,
-                    ),
-                  ),
-                  errorBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.red),
-                  ),
-                  errorStyle: const TextStyle(
-                    color: Colors.red,
-                  ),
+                hintText: 'شماره همراه خود را وارد کنید',
+                checked: Padding(
+                  padding: const EdgeInsets.only(top: 32),
+                  child: Checkbox(
+                      value: true,
+                      onChanged: (value) {},
+                      checkColor: Colors.green,
+                      activeColor: Colors.transparent),
                 ),
               ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: CustomButton(title: 'دریافت کد'),
             )
           ],
         ),
