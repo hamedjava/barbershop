@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pin_code_fields/flutter_pin_code_fields.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:test/core/constant/constants.dart';
 import 'package:test/feature/auth/presentation/widgets/buttons/custom_button.dart';
 
